@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Shehab Hazem</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Used some part of the code from Chris Wright (https://codepen.io/chriswrightdesign/)'s Pen  -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+
+<script>
+$(document).ready(function(){
+    $("select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".box").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".box").hide();
+            }
+        });
+    }).change();
+});
+</script>
+
+
+<div class="container">
+  <h1 class="heading-primary">Donation Page </h1>
+  <div class="accordion">
+    <dl>
+      <!-- description list -->
+
+      <dt>
+          <!-- accordion tab 1 - Delivery and Pickup Options -->
+          <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Donation Type</a>
+        </dt>
+      <dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
+       <div class="container">
+	
+		<form class="form cf">
+			<section class="charity cf">
+				<h2>Type of Donation:</h2>
+				<input type="radio" name="radio1" id="money" value="money"><label class="money-label four col" for="money">Money</label>
+				<input type="radio" name="radio1" id="blood" value="blood" checked><label class="blood-label four col" for="blood">Blood</label>
+				<input type="radio" name="radio1" id="food" value="food"><label class="food-label four col" for="food">food</label>
+			</section>
+      
+      <input type="radio" name="radio1" id="cloth" value="cloth"><label class="cloth-label four col" for="cloth">cloth</label>
+			</section>
+			
+		</form>
+	</div>
+      </dd>
+      <!--end accordion tab 1 -->
+
+      <dt>
+          <!-- accordion tab 2 - Shipping Info -->
+          <a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="accordion-title accordionTitle js-accordionTrigger">Donor Information</a>
+        </dt>
+     <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
+        <div class="container-fluid" style="padding-top: 20px;">
+          <p class="headings">Donor Infromation</p>
+          <form class="main-container">
+            <div class="row">
+              <div class="col-xs-4">
+                <label for="companyname" class="label-style">Donor Name</label></div>
+              <div class="form-group col-lg-4">
+                <input type="text" id="fullname" class="form-control" placeholder="Enter your Donor ID" required>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-xs-4">
+                <label for="companyname" class="label-style">Donor Name</label>
+              </div>
+              <div class="form-group col-lg-4">
+                <input type="text" id="companyname" class="form-control" placeholder="Enter Your Full Name" required>
+              </div>
+            </div>
+              <div class="row">
+			  </div>
+			  <div class="button-container">
+				  <button class="btn btn-success" type="submit">Submit</button>
+				  <button class="btn btn-warning" type="reset">Reset</button>
+			  </div>
+          </form>
+        </div>
+      </dd>
+      <!-- end accordion tab 3 -->
+
+    
+      <!-- end accordion tab 2 -->
+
+      <dt>
+          <!-- accordion tab 3 - Payment Info -->
+           <a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">Payment Information</a>
+        </dt>
+      <dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
+        <div class="container-fluid" style="padding-top: 20px;">
+        
+        
+          <select>
+            <option>Choose Color</option>
+            <option value="cash">Cash</option>
+            <option value="credit">Credit</option>
+            <option value="fawry">Fawry</option>
+        </select>
+    </div>
+    <div class="cash box">
+  
+  
+      
+        <div class="container-fluid" style="padding-top: 20px;">
+          <p class="headings">Cash Payment Details</p>
+          <form class="main-container">
+            <div class="row">
+              <div class="col-xs-4">
+                  Amount</div>
+              <div class="form-group col-lg-4">
+                <input type="text" id="fullname" class="form-control" placeholder="Enter your Donor ID" required>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-xs-4">
+                  Currency</div>
+              <div class="form-group col-lg-4">
+                <select name="Select1" style="width: 228px">
+	<option></option>
+	<option>$</option>
+	<option>EGP</option>
+	</select>
+              </div>
+            </div>
+              <div class="row">
+			  </div>
+			  <div class="button-container">
+				  <button class="btn btn-success" type="submit">Submit</button>
+				  <button class="btn btn-warning" type="reset">Reset</button>
+			  </div>
+          </form>
+        </div>
+
+      
+      
+      
+      
+      
+  </div>
+  
+  
+    <div class="credit box">
+      
+      
+  
+  
+      <div class="checkout-panel">
+    <div class="panel-body">
+      <h2 class="title">Checkout</h2>
+
+      <div class="progress-bar">
+        <div class="step active"></div>
+        <div class="step active"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+      </div>
+
+      <div class="payment-method">
+        <label for="card" class="method card">
+          <div class="card-logos">
+            <img src="img/visa_logo.png"/>
+            <img src="img/mastercard_logo.png"/>
+          </div>
+
+          <div class="radio-input">
+            <input id="card" type="radio" name="payment">
+            Pay £340.00 with credit card
+          </div>
+        </label>
+
+        <label for="paypal" class="method paypal">
+          <img src="img/paypal_logo.png"/>
+          <div class="radio-input">
+            <input id="paypal" type="radio" name="payment">
+            Pay £340.00 with PayPal
+          </div>
+        </label>
+      </div>
+
+      <div class="input-fields">
+        <div class="column-1">
+          <label for="cardholder">Cardholder's Name</label>
+          <input type="text" id="cardholder" />
+
+          <div class="small-inputs">
+            <div>
+              <label for="date">Valid thru</label>
+              <input type="text" id="date" placeholder="MM / YY" />
+            </div>
+
+            <div>
+              <label for="verification">CVV / CVC *</label>
+              <input type="password" id="verification"/>
+            </div>
+          </div>
+
+        </div>
+        <div class="column-2">
+          <label for="cardnumber">Card Number</label>
+          <input type="password" id="cardnumber"/>
+
+          <span class="info">* CVV or CVC is the card security code, unique three digits number on the back of your card separate from its number.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-footer">
+      <button class="btn back-btn">Back</button>
+      <button class="btn next-btn">Next Step</button>
+    </div>
+  </div>
+
+      
+      
+      
+      
+      
+      
+  
+  </div>
+  
+    <div class="fawry box">
+      
+      
+  
+      <p class="headings">Fawry Payment Details</p>
+          <form class="main-container">
+            <div class="row">
+              <div class="col-xs-4">
+                  Amount</div>
+              <div class="form-group col-lg-4">
+                <input type="text" id="amountfawry" class="form-control" placeholder="Enter The Amount" required>
+              </div>
+              
+              <div class="col-xs-4">
+                  Phone Number</div>
+              <div class="form-group col-lg-4">
+                <input type="text" id="phonenum" class="form-control" placeholder="Enter your Phone Number" required>
+              </div>
+
+              
+              
+            </div>
+
+
+            <div class="row">
+              <div class="col-xs-4">
+                  Currency</div>
+              <div class="form-group col-lg-4">
+                <select name="Select1" style="width: 228px">
+	<option></option>
+	<option>$</option>
+	<option>EGP</option>
+	</select>
+              </div>
+            </div>
+              <div class="row">
+			  </div>
+			  <div class="button-container">
+				  <button class="btn btn-success" type="submit">Submit</button>
+				  <button class="btn btn-warning" type="reset">Reset</button>
+			  </div>
+          </form>
+
+      
+      
+      
+  
+ 
+        
+        </div>
+      </dd>
+
+      <!-- end accordion tab 3 -->
+
+    </dl>
+    <!-- end description list -->
+  </div>
+  <!-- end accordion -->
+</div>
+<!-- end container -->
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
