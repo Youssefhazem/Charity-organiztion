@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donation</title>
+    <title>Payment</title>
 </head>
 <body>
-    <form action="php/cruddonation.php" method="post">
+    <form action="php/paymentcrud.php" method="post">
         
         id: <input type="number" name="id"><br><br>
-        date_time_don:<input type="datetime" name="date_time_don"><br><br>
-        reciver_id:<input type="number" name="reciver_id"><br><br>
+        user_id:<input type="number" name="user_id"><br><br>
+        date_time:<input type="datetime-local" name="date_time"><br><br>
+        reciver_id:<input type="number" name="Reciver_id"><br><br>
         manager_id:<input type="number" name="manager_id"><br><br>
-        user_id:<input type="number" name="user_idd"><br><br>
+        
 
 
         <button type="submit" name="Save">Create</button>

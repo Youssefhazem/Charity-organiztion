@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaymentDetails</title>
+</head>
+<body>
+    <form action="php/paymentdetailscrud.php" method="post">
+        
+        id: <input type="number" name="id"><br><br>
+        pay_id:<input type="number" name="pay_id"><br><br>
+        user_id:<input type="number" name="user_id"><br><br>
+
+        pay_type_id:<input type="number" name="pay_type_id"><br><br>
+        Quantity:<input type="number" name="Quantity"><br><br>
+        Qun_type_id:<input type="number" name="Qun_type_id"><br><br>
+        
+        status:<input type="number" name="status"><br><br>
+        payment_type_options_id:<input type="number" name="payment_type_options_id"><br><br>
+
+
+
+        <button type="submit" name="Save">Create</button>
+        <button type="submit" name="update">Update</button>
+        <button type="submit" name="delete">Delete</button>
+        <!--<button type="submit" name="delete">Read</button>-->
+    </form>
+</body>
+</html>
