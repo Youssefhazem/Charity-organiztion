@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class StoringFood implements Command
+class StoringBlood implements Command
 {
     public function __construct(Store $store)
     {
@@ -14,10 +14,10 @@ class StoringFood implements Command
     }
     public function execute()
     {
-        $this->store->StoreFood();
+        $this->store->StoreBlood();
     }
-     public function undo()
+    public function undo()
     {
-        $this->store->StoringFood();
+        $this->store->StoreBlood();
     }
 }

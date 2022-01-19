@@ -5,8 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-class StoringClothes implements Command
+class StoringMedicine implements Command
 {
     public function __construct(Store $store)
     {
@@ -14,10 +13,10 @@ class StoringClothes implements Command
     }
     public function execute()
     {
-        $this->store->Storeclothes();
+        $this->store->StoreMedicine();
     }
-    public function undo()
+     public function undo()
     {
-          $this->store->StoringClothes();
-    }
+          $this->store->StoringMedicine();
+     }
 }

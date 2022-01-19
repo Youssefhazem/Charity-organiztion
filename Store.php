@@ -1,50 +1,37 @@
 <?php
 
-/*
+/* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-/**
- * Description of Store
- *
- * @author USER
- */
-include_once 'Donation.php';
-abstract class Store implements CRUD{
-    public $report=null;
-    public $id;
-    public $name=null;
-    
-      public function creat(Store $x) {
-         echo 'creat store successfly';
+class Store
+{
+    private $store=[];
+    public function store()
+    {
+     return $this->store;   
     }
-
-    public function delete(Store $x) {
-         echo 'delete store successfly';
+    public function storingfood()
+    {
+        $this->store='storingfood';
     }
-
-    public function read(Store $x) {
-        echo 'read store successfly';
+      public function storingClothes()
+    {
+        $this->store='storingClothes';
     }
-
-    public function search(Store $x) {
-        echo 'find store successfly';
+      public function storingBlood()
+    {
+        $this->store='storingBlood';
     }
-
-    public function update(Store $x) {
-        echo 'update store successfly';
+      public function storingMedicine()
+    {
+        $this->store='storingMedicine';
+    }
+      public function storingHomeapplicantes()
+    {
+        $this->store='storingHomeapplicantes';
     }
     
-    public function Storing(/*Donation x*/ )
-    {
-         echo 'Do storing to store';
-    }
-
-    public function CapactiyOfStore() 
-    {
-        return 0000;
-    }
     
 }
