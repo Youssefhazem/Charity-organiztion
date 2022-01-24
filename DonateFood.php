@@ -7,14 +7,17 @@
  */
 
 /**
- * Description of DonateFood
+ * Description of donatefood
  *
- * @author USER
+ * @author زياد
  */
-class DonateFood implements I_donate
-{
-    public function donate()
-    {
-        echo 'Donation Food is add successfly';
-    }
+include_once 'idonate.php';
+class DonateFood implements idonate {
+  public function donate() {
+  echo " food ";
+  
+  }
+  
 }
+
+

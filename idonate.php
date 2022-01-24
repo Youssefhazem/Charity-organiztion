@@ -7,13 +7,10 @@
  */
 
 /**
- * Description of donate clothes
  *
  * @author زياد
  */
-include_once 'idonate.php';
-class DonateClothes implements idonate {
-  public function donate() {
-  echo " clothes ";}
+interface idonate {
+    public function donate();
     //put your code here
 }

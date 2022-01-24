@@ -7,14 +7,14 @@
  */
 
 /**
- * Description of DonateBlood
+ * Description of donateblood
  *
- * @author USER
+ * @author زياد
  */
-class DonateBlood implements I_donate{
-    //put your code here
-    public function donate() {
-        echo 'Donation Blood is add successfly';
-    }
-
+include_once 'idonate.php';
+class DonateBlood implements idonate {
+  public function donate() {
+  echo " Blood";
+  
+  }
 }

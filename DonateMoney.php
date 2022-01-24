@@ -7,13 +7,14 @@
  */
 
 /**
- * Description of donate clothes
+ * Description of DonateMoney
  *
  * @author زياد
  */
 include_once 'idonate.php';
-class DonateClothes implements idonate {
+class DonateMoney implements idonate {
   public function donate() {
-  echo " clothes ";}
-    //put your code here
+  echo " Money ";
+  
+  }
 }

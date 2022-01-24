@@ -10,14 +10,19 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        <?php
+        include_once 'facade.php';
         
-     <?php
 
-        include_once 'DBproxyyyy.php';
-        include_once 'CharityDB.php';
-        include_once 'GetQuery.php';
-        $X = new DBproxyyyy("Admin");
-        $X->DoQuery("Delete");                
-       ?>
+        $donatee=new facade();
+        $donatee->_get_donate_methods('money');
+        $donatee->donateblood();
+        $donatee->donateclothes();
+        $donatee->donatefood();
+        $donatee->donatemoney();
+        
+        
+
+        ?>
     </body>
 </html>
