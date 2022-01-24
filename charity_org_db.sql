@@ -48,7 +48,7 @@ INSERT INTO `city_address` (`id`, `name`, `pr_id`) VALUES
 
 --
 -- Table structure for table `customized_reports`
---
+
 
 CREATE TABLE `customized_reports` (
   `id` int(11) NOT NULL,
