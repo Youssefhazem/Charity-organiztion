@@ -10,12 +10,14 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php
+        
+     <?php
 
-        include_once 'RecievingDonationProcess.php';
-        $ReciveingDonationProcess = new RecievingDonationProcess();
-        $ReciveingDonationProcess->ChangeState();
-         
-        ?>
+        include_once 'DBproxyyyy.php';
+        include_once 'CharityDB.php';
+        include_once 'GetQuery.php';
+        $X = new DBproxyyyy("Admin");
+        $X->DoQuery("Delete");                
+       ?>
     </body>
 </html>
