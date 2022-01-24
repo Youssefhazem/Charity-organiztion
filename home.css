@@ -1,0 +1,54 @@
+body{
+  background-image: url("images/547bf87ffd0ac5a35ea3cc3e382c40c8.gif");
+}
+#container{
+    width: 100%;
+    overflow: hidden;
+}
+#left {
+    margin:auto;
+    width: 50%; 
+}
+
+#right{
+    margin:auto;
+    width: 50%;
+}
+
+#formHeader{
+    text-align: center;
+    border: solid white 2px;
+    color: white;
+}
+form {
+    padding: 5%;
+    color: white;
+}
+form label{
+  font-size: 23px;
+}
+form input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 7px solid #48dbfb;
+  border-radius: 4px;
+  box-sizing: border-box;    
+}
+
+/* Style the submit button */
+button {
+  width: 100%;
+  background-color:#341f97;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* Add a background color to the submit button on mouse-over */
+button:hover {
+  background-color:#341f97;
+}

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Register</title>
+        <link rel="stylesheet" type="text/css" href="home.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="left">
+                <h1 id="formHeader" > Register form  </h1>
+                <form  method="post" action="php/register.php" onsubmit="return validate_form ();">
+                    <label >Username</label>
+                    <input type="text" name="registerUsername" id="registerUsername" required>
+                    <label >Password</label>
+                    <input type="password" name="registerPassword" id="registerPassword" required>
+                    <label >Confirm Password</label>
+                    <input type="password" name="registerConfirmPassword" id="registerConfrimPassword" required>
+                    <label >E-Mail</label>
+                    <input type="email" name="registerEMail" id="registerEMail" required>
+                    <button type="submit" name="register" value="Register"> Register </button>
+                </form>
+            </div>
+        </div>
+        <script src="validtor.js"></script>
+    </body>
+</html>

@@ -1,82 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    
-    
-     <link rel="stylesheet" href="index.css">
-     <title>login</title>
-</head>
-<body>
-  
-  <div class="section">
-    <div class="container">
-      <div class="row full-height justify-content-center">
-        <div class="col-12 text-center align-self-center py-5">
-          <div class="section pb-5 pt-5 pt-sm-2 text-center">
-            <h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
-            <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
-            <label for="reg-log"></label>
-            <div class="card-3d-wrap mx-auto">
-              <div class="card-3d-wrapper">
-                <div class="card-front">
-                  <div class="center-wrap">
-                    <div class="section text-center">
-                      <h4 class="mb-4 pb-3">Log In</h4>
-                      <form action="php/login.php" method="post">
-                      <div class="form-group">
-                        <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-                        <i class="input-icon ri-mail-line"></i>
-                      </div>
-                      <div class="form-group mt-2">
-                        <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-                        <i class="input-icon ri-lock-2-line"></i>
-                      </div>
-                      <input type="submit" name="login" class="btn mt-4">
-                    </form>
-                      <p class="mb-0 mt-4 text-center"><a href="#" class="link">Forgot your password?</a></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-back">
-                  <div class="center-wrap">
-                      <div class="section text-center">
-                        <h4 class="mb-4 pb-3">Sign Up</h4>
-                        <form action="php/singup.php" method="post">
-                          <div class="form-group">
-                            <input type="text" name="supname" class="form-style"  placeholder="Your First Name" id="supname" autocomplete="off">
-                            <i class="input-icon ri-user-3-line"></i>
-                          </div>
-                          <div class="form-group mt-2">
-                            <input type="text" name="suplname" class="form-style"  placeholder="Your Last Name" id="suplname" autocomplete="off">
-                            <i class="input-icon ri-user-3-line"></i>
-                          </div>
-                          <div class="form-group mt-2">
-                            <input type="email" name="supemail" class="form-style" placeholder="Your Email" id="supemail" autocomplete="off">
-                            <i class="input-icon ri-mail-line"></i>
-                          </div>
-                          <div class="form-group mt-2">
-                            <input type="password" name="suppass" class="form-style" placeholder="Your Password" id="suppass" autocomplete="off">
-                            <i class="input-icon ri-lock-2-line"></i>
-                          </div>
-                          <input type="submit" name="singup" class="btn mt-3">
-                          
-                       </form>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+<html>
+    <head>
+        <title>login</title>
+        <link href="home.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="right">
+                <h1 id="formHeader"> Login form </h1>
+                <form method="post" action="php/login.php" onsubmit="return validate_form ( );">
+                    <label >Username</label>
+                    <input type="text" name="username" id="username">
+                    <label >Password</label>  
+                    <input type="password" name="password" id="password">
+                    <button type="submit" name="login" value="Login"> Login </button>
+                </form>
+            </div>   
         </div>
-      </div>
-    </div>
-  </div>
-  <script src="js/index.js" type="text/js"></script>
-</body>
+        <script src="validtor.js"></script>
+    </body>
 </html>
