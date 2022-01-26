@@ -11,18 +11,16 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        include_once 'facade.php';
-        
+        include_once 'report.php';
+        include_once 'repo.php';
+        include_once 'report_type.php';
+        $opject =new repo();
+        $opject->sendrepo('handwritten');
+        $opject->sendrepo('print');
+        $opject->sendrepo('pdf');
+        $opject->sendrepo('word');
 
-        $donatee=new facade();
-        $donatee->_get_donate_methods('money');
-        $donatee->donateblood();
-        $donatee->donateclothes();
-        $donatee->donatefood();
-        $donatee->donatemoney();
         
-        
-
-        ?>
+         ?>
     </body>
 </html>
